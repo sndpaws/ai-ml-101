@@ -3,7 +3,6 @@
 <img src="../assets/python-logo-only.svg" alt="Python logo" width="80" />
 
 > **Read this before the live class.**
-> **Module 1 · Mentor: Industry Mentor**
 
 ---
 

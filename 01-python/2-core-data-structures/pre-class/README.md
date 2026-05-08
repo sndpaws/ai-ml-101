@@ -1,7 +1,6 @@
 # Session 1.2 — Pre-Class Notes
 
 > **Read this before the live class.**
-> **Module 1 · Mentor: Industry Mentor**
 
 ---
 
