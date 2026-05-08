@@ -63,7 +63,7 @@ Tick each box as we cover it together. Each session lists **Topics** (what we to
 - [ ] Organizing data using sequential memory structures
 - [ ] Constructing and accessing elements in lists and tuples
 
-#### Session 2.1 — Advanced Data Structures: Dictionaries and Sets
+#### [Session 2.1 — Advanced Data Structures: Dictionaries and Sets](01-python/3-dictionaries-and-sets/)*
 
 **Topics:**
 - [ ] Core Python Data Structures
@@ -74,7 +74,7 @@ Tick each box as we cover it together. Each session lists **Topics** (what we to
 - [ ] Managing key-value pairs for optimized data retrieval
 - [ ] Utilizing sets for unique element operations
 
-#### Session 2.2 — Control Flow and Decision Making
+#### [Session 2.2 — Control Flow and Decision Making](01-python/4-control-flow/)*
 
 **Topics:**
 - [ ] Control Flow Mastery
