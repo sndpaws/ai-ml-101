@@ -2,7 +2,6 @@
 
 > **Module 1:** Python Programming Fundamentals and Flow Control
 > **Title:** Control Flow and Decision Making
-> **Mentor:** Industry Mentor
 
 ---
 

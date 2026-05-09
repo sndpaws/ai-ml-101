@@ -2,7 +2,6 @@
 
 > **Module 1:** Python Programming Fundamentals and Flow Control
 > **Title:** Advanced Data Structures — Dictionaries & Sets
-> **Mentor:** Industry Mentor
 
 ---
 

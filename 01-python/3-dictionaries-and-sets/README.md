@@ -1,7 +1,6 @@
 # Session 2.1 — Advanced Data Structures (Dictionaries & Sets)
 
 > **Module 1 · Python Programming Fundamentals and Flow Control**
-> **Mentor:** Industry Mentor
 
 In Session 1.2 you stored many values **by position** (`students[0]`, `students[1]`). Today you'll store them **by name** — and learn a structure where every item is guaranteed unique.
 

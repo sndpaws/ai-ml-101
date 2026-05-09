@@ -2,7 +2,6 @@
 
 > **Module 1:** Python Programming Fundamentals and Flow Control
 > **Title:** Core Python Data Structures — Lists & Tuples
-> **Mentor:** Industry Mentor
 
 ---
 

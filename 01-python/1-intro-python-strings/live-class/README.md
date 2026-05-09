@@ -2,7 +2,6 @@
 
 > **Module 1:** Python Programming Fundamentals and Flow Control
 > **Title:** Introduction to Python and String Manipulation
-> **Mentor:** Industry Mentor
 
 ---
 

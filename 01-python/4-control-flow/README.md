@@ -1,7 +1,6 @@
 # Session 2.2 — Control Flow and Decision Making
 
 > **Module 1 · Python Programming Fundamentals and Flow Control**
-> **Mentor:** Industry Mentor
 
 In Sessions 1.1 to 2.1 your scripts ran top-to-bottom — line 1, line 2, line 3, done. Today you'll teach your code to **make decisions** and choose different paths based on the data it sees.
 

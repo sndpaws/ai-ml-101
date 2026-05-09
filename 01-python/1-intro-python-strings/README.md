@@ -1,7 +1,6 @@
 # Session 1.1 — Introduction to Python and String Manipulation
 
 > **Module 1 · Python Programming Fundamentals and Flow Control**
-> **Mentor:** Industry Mentor
 
 Welcome to your first session. This folder contains everything you need before, during, and after class.
 

@@ -1,7 +1,6 @@
 # Session 1.2 — Core Python Data Structures (Lists & Tuples)
 
 > **Module 1 · Python Programming Fundamentals and Flow Control**
-> **Mentor:** Industry Mentor
 
 In Session 1.1 you stored **one** value in a variable. Today you'll store **many**.
 
