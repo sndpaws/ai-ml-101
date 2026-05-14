@@ -85,7 +85,7 @@ Tick each box as we cover it together. Each session lists **Topics** (what we to
 - [ ] Implementing conditional logic for program branching
 - [ ] Executing if/else statements for decision-making
 
-#### Session 3.1 — Iteration and Loop Mastery
+#### [Session 3.1 — Iteration and Loop Mastery](01-python/5-iteration-and-loops/)*
 
 **Topics:**
 - [ ] Control Flow Mastery
@@ -96,7 +96,7 @@ Tick each box as we cover it together. Each session lists **Topics** (what we to
 - [ ] Automating repetitive tasks through iteration
 - [ ] Managing complex data traversal using loops
 
-#### Session 3.2 — Functional Programming for Reusability
+#### [Session 3.2 — Functional Programming for Reusability](01-python/6-functional-programming/)*
 
 **Topics:**
 - [ ] Defining and writing clean reusable Functions
