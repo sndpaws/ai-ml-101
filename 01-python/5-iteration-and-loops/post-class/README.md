@@ -17,8 +17,8 @@
 
 ## Set 1 — Drill (10 problems)
 
-### 1. The basic `for` loop
-Walk over the list `["Mumbai", "Delhi", "Bengaluru", "Chennai"]` and print each city with `"📍 "` in front of it.
+### 1. The welcome-email loop
+Walk over the list `["Rahul", "Priya", "Amit", "Neha"]` and print `"Sending welcome email to: <name>"` for each.
 
 ### 2. `range()` and the off-by-one rule
 Predict what each prints, then run:
@@ -44,60 +44,60 @@ flowchart TD
 
 > 💡 The loop variable refills automatically on every pass. You never assign it yourself.
 
-### 3. Sum 1 to 100
+### 3. Apply 10% tax to a price list
+Given `prices = [100, 200, 300]`, write a `for` loop that multiplies each price by `1.1` and prints `"₹100 → ₹110.0"`-style lines for each.
+
+### 4. Sum 1 to 100
 Use a `for` loop + `range()` to add the numbers from 1 to 100 (inclusive). Print the total.
 
-### 4. Count the vowels
-Given `word = "encyclopedia"`, count how many vowels (`a`, `e`, `i`, `o`, `u`) it contains. Print the count.
+### 5. Filter a list — valid ages only
+Given `ages = [25, 30, 0, 22, 0, 40]`, build a new list `valid_ages` that contains only the non-zero entries and print it.
 
-### 5. Filter a list
-Given `nums = [12, 5, 28, 31, 7, 44, 9]`, build a new list `evens` containing **only the even numbers** and print it.
+### 6. Repeat a warning
+Use `for i in range(3):` to print `"Warning!"` exactly 3 times.
 
-### 6. Multiplication table
-Use a `for` loop to print the 7 times table from `7 × 1 = 7` to `7 × 10 = 70`. Use f-strings.
-
-### 7. Loop over a dict
+### 7. Loop over a dict — salary report
 Given:
 ```python
-prices = {"milk": 60, "bread": 40, "eggs": 90, "butter": 150}
+salaries = {"Rahul": 50000, "Priya": 75000, "Amit": 45000}
 ```
-Print each item and its price in the format `"milk costs ₹60"` using `.items()`.
+Print each employee and their salary in the format `"Rahul earns ₹50000"` using `.items()`.
 
-> 🎬 **One-click visualizer:** [open this loop in Python Tutor](https://pythontutor.com/visualize.html#code=prices%20%3D%20%7B%22milk%22%3A%2060%2C%20%22bread%22%3A%2040%2C%20%22eggs%22%3A%2090%7D%0A%0Afor%20item%2C%20price%20in%20prices.items%28%29%3A%0A%20%20%20%20print%28f%22%7Bitem%7D%20costs%20%E2%82%B9%7Bprice%7D%22%29&mode=edit&py=3) — click **Visualize Execution** and step through to *see* the loop variables refill on each pass.
+> 🎬 **One-click visualizer:** [open this loop in Python Tutor](https://pythontutor.com/visualize.html#code=salaries%20%3D%20%7B%22Rahul%22%3A%2050000%2C%20%22Priya%22%3A%2075000%2C%20%22Amit%22%3A%2045000%7D%0A%0Afor%20name%2C%20amount%20in%20salaries.items%28%29%3A%0A%20%20%20%20print%28f%22%7Bname%7D%20earns%20%E2%82%B9%7Bamount%7D%22%29&mode=edit&py=3) — click **Visualize Execution** and step through to *see* the loop variables refill on each pass.
 
 ### 8. The `while` countdown
-Use a `while` loop to print numbers from `10` down to `1`, then print `"Liftoff!"`. (Hint: start with `n = 10`, decrease it inside the loop.)
+Use a `while` loop to print numbers from `3` down to `1`, then print `"Liftoff!"`. (Hint: start with `timer = 3`, decrease inside the loop.)
 
-### 9. `break` early
-Loop over `nums = [4, 11, 7, 8, 15, 2, 9]`. Print each number until you hit one **greater than 10**, then `break`. The number that triggered the break should **not** be printed.
+### 9. `break` early — the corrupted file
+Loop over `files = ["clean", "clean", "CORRUPTED", "clean", "clean"]`. Print each filename. If you hit `"CORRUPTED"`, print `"CRITICAL ERROR"` and `break` — the remaining files should **not** print.
 
-### 10. `continue` to skip
-Loop over `range(1, 11)`. Skip the number `5` using `continue`. Print everything else.
+### 10. `continue` to skip — missing user data
+Loop over `ages = [25, 30, 0, 22, 0, 40]`. If `age == 0`, `continue` (skip). Otherwise print `"User is <age> years old."`.
 
 ---
 
 ## Set 2 — Bonus (5 problems)
 
-### 11. Nested loops — a multiplication table
-Print the full multiplication table from `1×1` to `5×5`. Each row should be on a separate line:
+### 11. Production-ready models
+Given:
+```python
+models = {"Model_A": 88, "Model_B": 95, "Model_C": 72, "Model_D": 91}
 ```
-1 x 1 = 1
-1 x 2 = 2
-...
-5 x 5 = 25
-```
-(Hint: outer loop for the first number, inner loop for the second.)
+Loop over `.items()`. For accuracy `> 90` print `"<name> is ready for production."`; for everything else print `"<name> needs more training."`.
 
-### 12. The three classic patterns side by side
-Given `scores = [72, 45, 90, 30, 65, 88, 51, 99, 22]`:
-- **Accumulator:** total of all scores.
-- **Counter:** how many are `>= 50`.
-- **Filter:** new list of scores `>= 80`.
+### 12. The battery-drain simulation
+Write a `while` loop. Start with `battery = 100`. While `battery > 80`, print `"Battery at <X>%. System running."`, then subtract `10`. After the loop, print `"Battery dropped to <X>%. Entering power saving mode."`.
+
+### 13. The three classic patterns side by side
+Given `salaries = {"Rahul": 50000, "Priya": 75000, "Amit": 45000, "Neha": 32000, "Vikram": 90000}`:
+- **Accumulator:** total payroll cost.
+- **Counter:** how many employees earn `≥ ₹50000`.
+- **Filter:** new list of names earning `≥ ₹50000`.
 
 Print all three results.
 
-### 13. The infinite-loop trap (with a safety net)
-Write a `while` loop that **looks** like it would run forever, but include a counter that breaks out after 5 iterations:
+### 14. The infinite-loop trap (with a safety net)
+Write a `while True:` loop that includes a counter that `break`s after 5 iterations:
 ```python
 count = 0
 while True:
@@ -108,22 +108,12 @@ while True:
 ```
 Predict the output before running. Then try removing the `break` (be ready to hit Stop ⏹).
 
-### 14. Word lengths
-Given `sentence = "Python loops are surprisingly fun"`, split it into words and print each word with its length:
-```
-Python — 6
-loops — 5
-are — 3
-...
-```
-(Hint: `sentence.split()` gives you a list of words.)
-
 ### 15. Spot the bugs
-This code is supposed to print every fruit. Find and fix all bugs:
+This code is supposed to print every user. Find and fix all bugs:
 ```python
-fruits = ["apple", "banana", "cherry"]
-for fruit fruits:
-print(fruit)
+new_users = ["Rahul", "Priya", "Amit"]
+for user new_users
+print(user)
 ```
 
 <details>
@@ -138,37 +128,32 @@ Look for:
 
 ---
 
-## Mini-Build — "Class Result Generator"
+## Mini-Build — "Automated Data Cleaner"
 
-Build a small program that processes a class of exam scores end-to-end — the kind of script every school portal runs.
+Take the live-class capstone and **own it**. Same pipeline, your version.
 
 ### Spec
-1. Define the data at the top of your cell:
+1. Define the messy raw data at the top of your cell:
    ```python
-   students = {
-       "Aanya": 78,
-       "Rohan": 45,
-       "Priya": 92,
-       "Karan": 33,
-       "Meera": 67,
-       "Aditya": 88,
-       "Sneha": 51,
-   }
+   raw_ages = [24, 28, "blank", 35, 19, "HACKER_CODE", 42, 50]
+   clean_ages = []
    ```
-2. Loop over `students.items()`. For each student:
-   - `score >= 80` → print `"Aanya: 78 — Pass"` style with grade `"A"`
-   - `60 <= score < 80` → grade `"B"`
-   - `50 <= score < 60` → grade `"C"`
-   - `score < 50` → grade `"F"`
-3. **After the loop** print three summary lines using counters:
-   - Class size
-   - Number of students who passed (`score >= 50`)
-   - Class average (use an accumulator)
+2. Loop over `raw_ages`. For each entry:
+   - If it equals `"HACKER_CODE"` → print `"🚨 SECURITY ALERT! Shutting down."` and `break`.
+   - If it equals `"blank"` → print `"⚠️  Missing data. Skipping."` and `continue`.
+   - Otherwise → print `"✅ Clean data: Age <X>."` and **append** to `clean_ages`.
+3. After the loop, print:
+   - `"Final clean dataset: <list>"`
+   - `"Total clean records: <count>"`
+   - `"Average age: <average>"` (use a separate accumulator loop, or compute from `clean_ages`).
 
 ### Constraints
-- Use **at least one** `for` loop, **one** `if`/`elif`/`else`, and **f-strings**.
-- Use **three counters/accumulators** (pass count, total scores, class size).
-- Keep it under 25 lines of code.
+- Use **`break`** and **`continue`** **exactly once each**.
+- Use **f-strings** in every output.
+- Order matters — the `HACKER_CODE` check must come before any data is appended.
+- Keep the whole solution under 25 lines.
+
+> ❓ **Reflection:** What happens if you swap the order of the `break` and `continue` checks? Try it and explain (in a markdown cell) what changes.
 
 ---
 
@@ -178,7 +163,7 @@ Build a small program that processes a class of exam scores end-to-end — the k
 
 ### The problem
 
-Build a program that asks the user for a password up to 3 times, then either grants access or locks them out — the same logic ATMs and login screens run.
+Build a program that gives a user **3 chances** to enter a password before locking them out — the same logic ATMs and login screens run.
 
 ### Spec
 1. Set:
@@ -190,7 +175,7 @@ Build a program that asks the user for a password up to 3 times, then either gra
    - Pick the next guess from `guesses` using `attempt` as the index.
    - If the guess matches `real_password` → print `"✅ Access granted"` and `break`.
    - Else → print `f"❌ Wrong (attempt {attempt + 1} of 3)"` and increment `attempt`.
-3. After the loop: if `attempt == 3` and no break happened, print `"🔒 Locked out — too many attempts."`. (Hint: use a `while-else` or a flag variable.)
+3. After the loop: if no `break` happened (use a flag variable), print `"🔒 Locked out — too many attempts."`.
 
 ### Constraints
 - Use a `while` loop with a clear exit condition.
@@ -236,7 +221,7 @@ Loops are the first thing in Python where *seeing* the variable change on each p
 
 **Title:** Functional Programming for Reusability
 
-You can now loop over 1,000 students and grade each one. But what if you need that *same* grading logic in 12 different places in your code? You don't copy-paste the loop 12 times — you wrap it into a **function** and call it by name. Next class: `def`, parameters, `return`. This is where your scripts stop being scripts and start being **software**.
+You can now loop over 10,000 users and process each one. But what if you need that *same* loop or *same* `if`/`elif` in 12 different places in your code? You don't copy-paste — you wrap it into a **function** and call it by name. Next class: `def`, parameters, `return`. This is where your scripts stop being scripts and start being **software**.
 
 ---
 
@@ -247,9 +232,9 @@ You can now loop over 1,000 students and grade each one. But what if you need th
 
 ```python
 # 1
-cities = ["Mumbai", "Delhi", "Bengaluru", "Chennai"]
-for city in cities:
-    print(f"📍 {city}")
+new_users = ["Rahul", "Priya", "Amit", "Neha"]
+for user in new_users:
+    print(f"Sending welcome email to: {user}")
 
 # 2
 # range(5)         → [0, 1, 2, 3, 4]   stops BEFORE 5
@@ -257,130 +242,122 @@ for city in cities:
 # range(0, 10, 3)  → [0, 3, 6, 9]
 
 # 3
+prices = [100, 200, 300]
+for price in prices:
+    new_price = price * 1.1
+    print(f"₹{price} → ₹{new_price}")
+
+# 4
 total = 0
 for n in range(1, 101):       # stop is exclusive — use 101
     total = total + n
 print(total)                  # 5050
 
-# 4
-word = "encyclopedia"
-vowels = "aeiou"
-count = 0
-for ch in word:
-    if ch in vowels:
-        count = count + 1
-print(count)                  # 6
-
 # 5
-nums = [12, 5, 28, 31, 7, 44, 9]
-evens = []
-for n in nums:
-    if n % 2 == 0:
-        evens.append(n)
-print(evens)                  # [12, 28, 44]
+ages = [25, 30, 0, 22, 0, 40]
+valid_ages = []
+for a in ages:
+    if a != 0:
+        valid_ages.append(a)
+print(valid_ages)             # [25, 30, 22, 40]
 
 # 6
-for i in range(1, 11):
-    print(f"7 x {i} = {7 * i}")
+for i in range(3):
+    print("Warning!")
 
 # 7
-prices = {"milk": 60, "bread": 40, "eggs": 90, "butter": 150}
-for item, price in prices.items():
-    print(f"{item} costs ₹{price}")
+salaries = {"Rahul": 50000, "Priya": 75000, "Amit": 45000}
+for name, amount in salaries.items():
+    print(f"{name} earns ₹{amount}")
 
 # 8
-n = 10
-while n >= 1:
-    print(n)
-    n = n - 1
+timer = 3
+while timer > 0:
+    print(timer)
+    timer = timer - 1
 print("Liftoff!")
 
 # 9
-nums = [4, 11, 7, 8, 15, 2, 9]
-for n in nums:
-    if n > 10:
+files = ["clean", "clean", "CORRUPTED", "clean", "clean"]
+for file in files:
+    if file == "CORRUPTED":
+        print("CRITICAL ERROR")
         break
-    print(n)                  # 4
+    print(file)
 
 # 10
-for n in range(1, 11):
-    if n == 5:
+for age in [25, 30, 0, 22, 0, 40]:
+    if age == 0:
         continue
-    print(n)                  # 1 2 3 4 6 7 8 9 10
+    print(f"User is {age} years old.")
 ```
 
 ### Set 2
 
 ```python
 # 11
-for i in range(1, 6):
-    for j in range(1, 6):
-        print(f"{i} x {j} = {i * j}")
+models = {"Model_A": 88, "Model_B": 95, "Model_C": 72, "Model_D": 91}
+for model, accuracy in models.items():
+    if accuracy > 90:
+        print(f"{model} is ready for production.")
+    else:
+        print(f"{model} needs more training.")
 
 # 12
-scores = [72, 45, 90, 30, 65, 88, 51, 99, 22]
-total = 0
-passed = 0
-top = []
-for s in scores:
-    total = total + s
-    if s >= 50:
-        passed = passed + 1
-    if s >= 80:
-        top.append(s)
-print("Sum:", total)          # 560
-print("Passed:", passed)      # 6
-print("Top:", top)            # [90, 88, 99]
+battery = 100
+while battery > 80:
+    print(f"Battery at {battery}%. System running.")
+    battery = battery - 10
+print(f"Battery dropped to {battery}%. Entering power saving mode.")
 
 # 13
+salaries = {"Rahul": 50000, "Priya": 75000, "Amit": 45000, "Neha": 32000, "Vikram": 90000}
+total = 0
+high_earners = 0
+top_names = []
+for name, amount in salaries.items():
+    total = total + amount
+    if amount >= 50000:
+        high_earners = high_earners + 1
+        top_names.append(name)
+print("Payroll total:", total)
+print("High earners:", high_earners)
+print("Top names:    ", top_names)
+
+# 14
 # Predicted: prints "Hello" 5 times, then exits.
 # Without the break: infinite — hit Stop ⏹.
 
-# 14
-sentence = "Python loops are surprisingly fun"
-for word in sentence.split():
-    print(f"{word} — {len(word)}")
-
 # 15 — Fixed version
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:          # was: for fruit fruits  (missing 'in', missing ':')
-    print(fruit)              # was: not indented
+new_users = ["Rahul", "Priya", "Amit"]
+for user in new_users:         # was: for user new_users  (missing 'in', missing ':')
+    print(user)                # was: not indented
 ```
 
-### Mini-Build — Class Result Generator
+### Mini-Build — Automated Data Cleaner
 
 ```python
-students = {
-    "Aanya": 78, "Rohan": 45, "Priya": 92, "Karan": 33,
-    "Meera": 67, "Aditya": 88, "Sneha": 51,
-}
+raw_ages = [24, 28, "blank", 35, 19, "HACKER_CODE", 42, 50]
+clean_ages = []
+
+for data in raw_ages:
+    if data == "HACKER_CODE":
+        print("🚨 SECURITY ALERT! Shutting down.")
+        break
+    if data == "blank":
+        print("⚠️  Missing data. Skipping.")
+        continue
+    print(f"✅ Clean data: Age {data}.")
+    clean_ages.append(data)
 
 total = 0
-passed = 0
-class_size = 0
+for age in clean_ages:
+    total = total + age
 
-for name, score in students.items():
-    class_size = class_size + 1
-    total = total + score
-
-    if score >= 80:
-        grade = "A"
-    elif score >= 60:
-        grade = "B"
-    elif score >= 50:
-        grade = "C"
-    else:
-        grade = "F"
-
-    if score >= 50:
-        passed = passed + 1
-        print(f"{name}: {score} — Pass (Grade {grade})")
-    else:
-        print(f"{name}: {score} — Fail (Grade {grade})")
-
-print(f"\nClass size: {class_size}")
-print(f"Passed:     {passed}")
-print(f"Average:    {total / class_size:.1f}")
+print(f"\nFinal clean dataset: {clean_ages}")
+print(f"Total clean records: {len(clean_ages)}")
+if clean_ages:
+    print(f"Average age: {total / len(clean_ages)}")
 ```
 
 ### Bonus Mini-Build — Login Gatekeeper

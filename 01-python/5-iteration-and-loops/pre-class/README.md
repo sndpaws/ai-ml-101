@@ -8,6 +8,7 @@
 
 - Walk through every item in a collection with a **`for`** loop
 - Generate sequences of numbers with **`range()`**
+- Loop over dicts using **`.items()`** to grab keys and values at once
 - Repeat *until a condition flips* with a **`while`** loop
 - Skip an item with **`continue`** · stop early with **`break`**
 - Wire loops together with the `if`/`else` you learned in 2.2
@@ -18,47 +19,55 @@
 flowchart LR
     A["one value<br/>(2.2 if/else)"] --> B["FOR<br/>walk every item"]
     B --> C["range()<br/>number sequences"]
-    C --> D["WHILE<br/>repeat until..."]
-    D --> E["break / continue<br/>steer the loop"]
-    E --> F["loop + if<br/>real programs"]
+    C --> D["dict loops<br/>.items()"]
+    D --> E["WHILE<br/>repeat until..."]
+    E --> F["break / continue<br/>steer the loop"]
+    F --> G["loop + if<br/>real programs"]
     style A fill:#fef3c7,stroke:#92400e,color:#92400e
     style B fill:#dcfce7,stroke:#166534,color:#166534
     style C fill:#dbeafe,stroke:#1e40af,color:#1e40af
     style D fill:#bbf7d0,stroke:#15803d,color:#15803d
-    style E fill:#fed7aa,stroke:#9a3412,color:#9a3412
-    style F fill:#e9d5ff,stroke:#6b21a8,color:#6b21a8
+    style E fill:#bfdbfe,stroke:#1e40af,color:#1e40af
+    style F fill:#fed7aa,stroke:#9a3412,color:#9a3412
+    style G fill:#e9d5ff,stroke:#6b21a8,color:#6b21a8
 ```
 
 <details>
 <summary>👀 <b>30-second sneak peek</b> — click to see what these will look like in code</summary>
 
 ```python
-# Walk every item
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(fruit)
+# Walk every item — send welcome emails to new users
+new_users = ["Rahul", "Priya", "Amit", "Neha"]
+for user in new_users:
+    print(f"Sending welcome email to: {user}")
 
-# Count from 0 to 4
-for i in range(5):
-    print(i)
+# Repeat N times — count from 0 to 4
+for number in range(5):
+    print(f"Processing item {number}")
 
-# Repeat until a condition flips
-attempts = 0
-while attempts < 3:
-    print("Trying...")
-    attempts = attempts + 1
+# Walk a dict — pull keys and values together
+salaries = {"Rahul": 50000, "Priya": 75000, "Amit": 45000}
+for name, amount in salaries.items():
+    print(f"{name} earns ₹{amount}")
 
-# Stop early
-for n in [1, 2, 3, 4, 5]:
-    if n == 3:
+# Repeat until a condition flips — battery drain
+battery = 100
+while battery > 80:
+    print(f"Battery at {battery}%")
+    battery = battery - 10
+
+# Stop early — corrupted file
+files = ["clean", "clean", "CORRUPTED", "clean"]
+for file in files:
+    if file == "CORRUPTED":
         break
-    print(n)            # prints 1, 2 only
+    print(file)
 
-# Skip one item
-for n in [1, 2, 3, 4, 5]:
-    if n == 3:
+# Skip one item — missing user age
+for age in [25, 30, 0, 22, 0, 40]:
+    if age == 0:
         continue
-    print(n)            # prints 1, 2, 4, 5
+    print(age)
 ```
 
 Don't memorise — just notice the *shape*. Every loop has a keyword (`for` / `while`), a colon `:`, and an **indented** body.
@@ -71,7 +80,7 @@ Don't memorise — just notice the *shape*. Every loop has a keyword (`for` / `w
 
 Don't search — bring your **guesses** to class.
 
-1. You have a list of 1,000 student scores. You want to print *"Passed"* for every score ≥ 50 and *"Failed"* otherwise. Without using a loop, how would you do this? (Honestly try — feel the pain of writing 1,000 `if` statements.)
+1. You work for Netflix. 10,000 new users just signed up and you have to send each one a personalised welcome email. **Without** using a loop, how would you do this? Honestly try — feel the pain.
 2. A `while` loop keeps running as long as its condition is `True`. What's the worst thing that could happen if the condition **never** becomes `False`?
 
 ---
